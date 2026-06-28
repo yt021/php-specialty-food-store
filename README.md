@@ -2,70 +2,65 @@
 
 [فارسی](#فارسی) · [English](#english)
 
-یک پروژه فروشگاه اینترنتی مبتنی بر PHP و MySQL شامل ویترین محصولات،
-سبد خرید، حساب کاربری و پنل مدیریت. این مخزن نسخه‌ای پاک‌سازی‌شده برای
-نمایش عمومی کد است و اطلاعات واقعی یا اتصال فعال به سرویس‌های بیرونی ندارد.
+یک فروشگاه اینترنتی مبتنی بر PHP و MySQL برای نمایش محصولات غذایی، مدیریت
+سبد خرید و سفارش‌ها، حساب مشتریان و عملیات مدیریتی فروشگاه.
 
-A legacy PHP/MySQL e-commerce application featuring a product storefront,
-shopping cart, customer accounts, and an administration panel. This repository
-is a sanitized public code showcase with no real data or active external
-integrations.
+A PHP and MySQL e-commerce application for specialty food products, customer
+accounts, shopping carts, orders, and store administration.
 
-> [!IMPORTANT]
-> This is a portfolio/reference project, not a production-ready distribution.
-> Payment, SMS, email, SnappPay, Pinket, and delivery integrations are disabled.
+> این مخزن نسخه عمومی و نمایشی پروژه است. اطلاعات واقعی و اتصال فعال به
+> سرویس‌های پرداخت، پیامک، ایمیل و مارکت‌پلیس در آن وجود ندارد.
+>
+> This repository is a public showcase. It contains no real customer data or
+> active payment, SMS, email, or marketplace connections.
 
 ---
 
 ## فارسی
 
-### معرفی پروژه
+### درباره پروژه
 
-این پروژه برای مدیریت فروش آنلاین محصولات غذایی تخصصی طراحی شده است. ساختار
-اصلی برنامه حفظ شده تا نحوه توسعه یک سامانه فروشگاهی PHP سنتی، از صفحات
-محصول تا فرایند سفارش و مدیریت عملیات فروشگاه، قابل بررسی باشد.
-
-محتویات پوشه `public_html` به ریشه مخزن منتقل شده‌اند. مسیر پایه فایل‌ها در
-`base_shop.php` از محل واقعی پروژه محاسبه می‌شود و دیگر به مسیر هاست وابسته
-نیست.
+این پروژه بخش‌های اصلی یک فروشگاه اینترنتی را در قالب یک برنامه PHP سنتی
+پیاده‌سازی می‌کند. ساختار برنامه شامل ویترین محصولات، فرایند خرید، حساب
+کاربری مشتری و پنل مدیریت یکپارچه است.
 
 ### امکانات
 
-- نمایش و دسته‌بندی محصولات
-- صفحه جزئیات و انتخاب ویژگی‌های محصول
-- سبد خرید و فرایند ثبت سفارش چندمرحله‌ای
+- نمایش محصولات و فیلتر براساس دسته‌بندی
+- صفحات جزئیات و انتخاب ویژگی‌های محصول
+- سبد خرید و فرایند چندمرحله‌ای ثبت سفارش
 - ثبت‌نام، ورود و مدیریت حساب مشتری
-- مشاهده سفارش‌ها و فاکتور
-- صفحات محتوا، مطالب، نظرات و پرسش‌های متداول
-- پنل مدیریت محصولات، دسته‌بندی‌ها، سفارش‌ها و مشتریان
+- تاریخچه سفارش‌ها و نمایش فاکتور
+- صفحات محتوایی، مطالب، نظرات و پرسش‌های متداول
+- مدیریت محصولات، دسته‌بندی‌ها، سفارش‌ها و مشتریان
 - گزارش‌های فروش، فعالیت و اطلاعات جغرافیایی
 - ابزارهای مدیریت ارسال، تولید، محتوا و صفحه اصلی
-- ساختار ماژولار برای درگاه پرداخت، پیامک، ایمیل و سرویس‌های همکار
+- معماری ماژولار برای سرویس‌های پرداخت، پیامک و فروش همکار
 
 ### فناوری‌ها
 
 | بخش | فناوری |
 | --- | --- |
 | Backend | PHP 8+ |
-| Database | MySQL / `mysqli` |
-| Frontend | HTML، CSS، JavaScript |
-| Web server | Apache + `mod_rewrite` یا PHP Development Server |
-| Libraries | PHPMailer، NuSOAP، SimpleXLSX، XLSXWriter |
+| Database | MySQL و `mysqli` |
+| Frontend | HTML، CSS و JavaScript |
+| Web server | Apache یا PHP Development Server |
+| Libraries | PHPMailer، NuSOAP، SimpleXLSX و XLSXWriter |
 
 ### ساختار پروژه
 
 ```text
 account/      حساب کاربری مشتری
 admin/        پنل مدیریت و عملیات فروشگاه
-cart/         مراحل سبد خرید، پرداخت و فاکتور
-modules/      منطق مشترک، دیتابیس و اتصال سرویس‌ها
+cart/         سبد خرید، ثبت سفارش، پرداخت و فاکتور
+modules/      منطق مشترک، دیتابیس و سرویس‌ها
 products/     صفحات و قالب‌های محصولات
-pages/        صفحات ثابت سایت
-posts/        مطالب و محتوای وبلاگ
-comment/      ثبت و نمایش نظرات
-css/          استایل‌های عمومی و مدیریتی
+pages/        صفحات ثابت
+posts/        مطالب و محتوای سایت
+comment/      نظرات مشتریان
+css/          استایل‌های فروشگاه و پنل مدیریت
 js/           اسکریپت‌های رابط کاربری
-fonts/        فونت‌های محلی پروژه
+fonts/        فونت‌های محلی
 img/          تصاویر رابط کاربری
 ```
 
@@ -77,84 +72,57 @@ img/          تصاویر رابط کاربری
 - MySQL
 - افزونه‌های `mysqli`، `curl`، `json` و `mbstring`
 
-متغیرهای نمونه در فایل `.env.example` قرار دارند. برنامه متغیرهای دیتابیس را
-مستقیماً از محیط اجرا می‌خواند:
+ابتدا یک دیتابیس محلی ایجاد و متغیرهای اتصال را تنظیم کنید:
 
-```text
-DB_HOST=127.0.0.1
-DB_NAME=specialty_food_store
-DB_USER=showcase_user
-DB_PASSWORD=change-me
+```powershell
+$env:DB_HOST="127.0.0.1"
+$env:DB_NAME="specialty_food_store"
+$env:DB_USER="root"
+$env:DB_PASSWORD=""
 ```
 
-پس از آماده‌سازی یک دیتابیس محلی:
+سپس از ریشه پروژه برنامه را اجرا کنید:
 
-```bash
+```powershell
 php -S 127.0.0.1:8080
 ```
 
-سپس `http://127.0.0.1:8080/` را باز کنید.
+آدرس برنامه:
 
-این مخزن شامل دیتابیس یا اطلاعات نمونه کامل نیست؛ بنابراین نمایش کامل
-محصولات و سفارش‌ها به یک schema و داده آزمایشی محلی نیاز دارد.
-
-### امنیت نسخه عمومی
-
-- تمام رمزها، توکن‌ها، شناسه‌های درگاه و کلیدهای واقعی حذف شده‌اند.
-- لاگ‌ها، دیتابیس‌ها، تراکنش‌ها، اطلاعات مشتریان و کلید خصوصی منتشر نمی‌شوند.
-- سرویس‌های پرداخت، پیامک، ایمیل، ارسال و مارکت‌پلیس غیرفعال هستند.
-- مقادیر موجود در تنظیمات صرفاً placeholder و عمداً غیرقابل استفاده‌اند.
-- فایل `.gitignore` از ثبت فایل‌های حساس و تولیدشده جلوگیری می‌کند.
-
-ثابت `EXTERNAL_INTEGRATIONS_ENABLED` در `base_shop.php` عمداً `false` است.
-فعال‌سازی سرویس‌ها باید فقط در یک نسخه خصوصی و پس از بازبینی امنیتی انجام شود.
-
-### پیشنهاد برای تکمیل ویترین پروژه
-
-برای جذاب‌تر شدن صفحه GitHub، این موارد را به مخزن اضافه کنید:
-
-1. تصویر صفحه اصلی و فهرست محصولات
-2. تصویر صفحه محصول و سبد خرید
-3. تصویر داشبورد مدیریت، سفارش‌ها و گزارش‌ها با داده کاملاً ساختگی
-4. GIF کوتاه از مسیر «محصول ← سبد خرید ← ثبت سفارش آزمایشی»
-5. نمودار ساده معماری یا جریان ثبت سفارش
-6. بخش «چالش‌های فنی» شامل مدیریت کد قدیمی، پاک‌سازی اطلاعات و اصلاح مسیرها
-7. برنامه توسعه شامل Docker، migration دیتابیس، تست خودکار و بهبود امنیت
-
-تصاویر را می‌توان در مسیر `docs/screenshots/` قرار داد و با این قالب نمایش داد:
-
-```md
-![صفحه اصلی فروشگاه](docs/screenshots/storefront.webp)
-![پنل مدیریت](docs/screenshots/admin-dashboard.webp)
+```text
+http://127.0.0.1:8080
 ```
+
+دیتابیس اصلی و اطلاعات کاربران در این مخزن قرار ندارند. برای نمایش کامل
+فروشگاه باید از schema سازگار و داده‌های آزمایشی استفاده شود.
+
+### نسخه نمایشی عمومی
+
+در این نسخه سرویس‌های پرداخت، پیامک، ایمیل، ارسال، SnappPay و Pinket غیرفعال
+هستند. تنظیمات موجود صرفاً مقادیر نمایشی و غیرقابل استفاده‌اند.
 
 ---
 
 ## English
 
-### Overview
+### About
 
-This project manages the online sale of specialty food products. Its original
-folder structure has been retained to demonstrate a traditional PHP commerce
-application covering the storefront, checkout flow, customer accounts, and
-back-office operations.
-
-The former `public_html` contents now live at the repository root.
-`base_shop.php` resolves the filesystem root from its own location instead of
-using a production hosting path.
+This project implements the primary parts of an online store as a traditional
+PHP application. It combines a product storefront, purchasing workflow,
+customer accounts, and an integrated administration panel.
 
 ### Features
 
 - Product catalog and category filtering
-- Product detail and option-selection pages
-- Multi-step cart and order workflow
+- Product details and option selection
+- Multi-step shopping-cart and order workflow
 - Customer registration, authentication, and account management
 - Order history and invoices
 - Content pages, posts, comments, and FAQs
 - Product, category, order, and customer administration
 - Sales, activity, and geographic reports
-- Shipping, production, content, and homepage management tools
-- Modular payment, SMS, email, and marketplace integration code
+- Shipping, production, content, and homepage management
+- Modular payment, SMS, and marketplace service adapters
 
 ### Technology
 
@@ -162,9 +130,9 @@ using a production hosting path.
 | --- | --- |
 | Backend | PHP 8+ |
 | Database | MySQL with `mysqli` |
-| Frontend | HTML, CSS, JavaScript |
-| Web server | Apache with `mod_rewrite`, or PHP's development server |
-| Libraries | PHPMailer, NuSOAP, SimpleXLSX, XLSXWriter |
+| Frontend | HTML, CSS, and JavaScript |
+| Web server | Apache or PHP's development server |
+| Libraries | PHPMailer, NuSOAP, SimpleXLSX, and XLSXWriter |
 
 ### Project structure
 
@@ -175,7 +143,7 @@ cart/         Cart, checkout, payment, and invoices
 modules/      Shared logic, database, and service adapters
 products/     Product pages and templates
 pages/        Static content pages
-posts/        Articles and blog content
+posts/        Articles and site content
 comment/      Customer comments
 css/          Storefront and administration styles
 js/           Browser-side behavior
@@ -183,7 +151,7 @@ fonts/        Local fonts
 img/          Interface assets
 ```
 
-### Local setup
+### Local development
 
 Requirements:
 
@@ -191,63 +159,37 @@ Requirements:
 - MySQL
 - PHP extensions: `mysqli`, `curl`, `json`, and `mbstring`
 
-Safe example values are documented in `.env.example`. Database configuration
-is read from the process environment:
+Create a local database and configure the connection:
 
-```text
-DB_HOST=127.0.0.1
-DB_NAME=specialty_food_store
-DB_USER=showcase_user
-DB_PASSWORD=change-me
+```powershell
+$env:DB_HOST="127.0.0.1"
+$env:DB_NAME="specialty_food_store"
+$env:DB_USER="root"
+$env:DB_PASSWORD=""
 ```
 
-After preparing a local database, start the application from the repository
-root:
+Start the application from the repository root:
 
-```bash
+```powershell
 php -S 127.0.0.1:8080
 ```
 
-Then open `http://127.0.0.1:8080/`.
+Open:
 
-The production database and customer data are intentionally excluded. Complete
-catalog and order functionality therefore requires a reviewed local schema and
-synthetic seed data.
-
-### Public-repository safety
-
-- Real credentials, tokens, merchant identifiers, and private keys were removed.
-- Logs, databases, transactions, customer records, and generated exports are excluded.
-- Payment, SMS, email, delivery, SnappPay, Pinket, and webhook traffic is disabled.
-- Committed configuration values are deliberately nonfunctional placeholders.
-- `.gitignore` blocks common secret, runtime, database, backup, and key files.
-
-`EXTERNAL_INTEGRATIONS_ENABLED` is deliberately set to `false` in
-`base_shop.php`. Connecting real services requires a separate private
-configuration and security review.
-
-### Recommended showcase additions
-
-For a stronger GitHub presentation, add:
-
-1. Storefront and catalog screenshots
-2. Product and shopping-cart screenshots
-3. Admin dashboard, order, and report screenshots using synthetic data
-4. A short GIF of the product-to-test-order flow
-5. A compact architecture or checkout-flow diagram
-6. A “Technical challenges” section covering legacy modernization,
-   sanitization, and path migration
-7. A roadmap for Docker, database migrations, automated tests, and security work
-
-Store media under `docs/screenshots/` and reference it as follows:
-
-```md
-![Storefront](docs/screenshots/storefront.webp)
-![Administration dashboard](docs/screenshots/admin-dashboard.webp)
+```text
+http://127.0.0.1:8080
 ```
 
-## Disclaimer
+The production database and customer records are not included. A compatible
+local schema and synthetic data are required to demonstrate the complete
+catalog and order workflow.
 
-This repository is intended for portfolio and code-review purposes. It should
-not be deployed for real commerce without dependency upgrades, database
-migrations, automated testing, and a full application-security review.
+### Public showcase
+
+Payment, SMS, email, delivery, SnappPay, and Pinket integrations are disabled
+in this version. Committed configuration values are nonfunctional placeholders.
+
+## Status
+
+This repository is maintained as a portfolio and code-review showcase of a
+legacy PHP commerce application.
