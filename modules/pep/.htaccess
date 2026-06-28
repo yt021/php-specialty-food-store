@@ -1,0 +1,6 @@
+<Files "key.xml">
+require all denied
+require host localhost
+require ip 127.0.0.1
+require ip xxx.yyy.zzz.aaa
+</Files>

@@ -1,0 +1,181 @@
+@font-face {
+font-family: 'dastnevis';
+src:url('../fonts/dastnevis.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'wyekan';
+src:url('../fonts/wYekan.eot');
+src:url('../fonts/wYekan.eot') format('embedded-opentype'),
+url('../fonts/wYekan.woff') format('woff'),
+url('../fonts/IRANSansWeb2.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    border:0;
+    outline:none;
+    list-style: none;
+    font-family: wyekan;
+    transition: all 0.3s;
+    direction:rtl;
+    text-decoration: none;
+    list-style:none;
+}
+@page{
+    size: A5 landscape;
+    margin:0;
+    /*size: A4;*/
+}
+body{
+    padding:0;
+    margin:0;
+}
+
+div.print_page_holder{
+    padding:4mm;
+    width:21cm;
+    height:14.82cm;
+    margin:0;
+}
+
+div.print_page{
+    padding:2mm;
+/*    margin:0  0 50px 50px;*/
+/*    border:0.6mm solid black;*/
+    width:100%;
+    height:100%;
+/*    width:calc(21 * 50px - 100px);*/
+/*    height:calc(14.8 * 50px - 100px);*/
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div.print_page_holder{
+    /*height:29.7cm;*/
+}
+div.print_page{
+    height:13.92cm;
+}
+div.pp div.right{
+    height:100%;
+    width:calc(100% - 30mm - 17mm + 2.75mm);
+    float:right;
+    border:0.6mm solid black;
+    position:relative;
+    margin:0 1mm 0 5mm;
+    padding:1mm;
+}
+
+div.pp div.logo{
+    width:30mm;
+    height:33mm;
+/*    position:absolute;*/
+/*    top:0;*/
+/*    right:0;*/
+    float:right
+}
+div.pp div.logo img{
+    width:100%;
+}
+
+div.pp div.sender_info{
+/*    position:absolute;*/
+    width:calc(100% - 30mm - 5mm);
+    height:33mm;
+/*    top:0;*/
+/*    right:210px;*/
+    float:left;
+/*    background-color:red;*/
+    font-size:5mm;
+    line-height:8mm;
+    padding:1mm;
+}
+.cb{clear:both;}
+div.cut{width:100%;height:0.4mm;background-color:black;margin:0.5mm 0;}
+
+div.rec_info{
+    float:right;
+    width:60%;
+    line-height:10mm;
+    font-size:5mm;
+    height:auto;
+    padding-right:3mm;
+    padding-top:1mm;
+/*    background-color:Red;*/
+}
+div.left_info{
+    float:left;
+    width:39%;
+    height:auto;
+}
+
+.tac{
+    text-align: center;
+}
+div.left_info.high_no h3{
+    font-size:3.2mm;
+}
+div.left_info .table_holder{
+    border:0.2mm solid black;
+    width:100%;
+    height:90mm;
+    margin-top:1mm;
+    max-height:calc(100% - 16mm);
+    overflow: hidden;
+}
+div.left_info.high_no .table_holder{
+    height:92.5mm;
+}
+
+.table_holder table{
+    border-collapse:collapse;
+    margin:auto;
+    width:100%;
+    font-size:3.2mm;
+/*    min-height:250px;*/
+    text-align:center;
+ 
+}
+div.left_info.high_no .table_holder table{
+    font-size:2.4mm;
+}
+table caption{
+    font-size:14px;
+}
+
+div.pp div.left{
+    height:100%;
+    width:38mm;
+    float:left;
+    position:relative;
+    padding:6mm 2mm 0 0;
+/*    background-color:red;*/
+    font-size:4mm;
+    border-right:0.2mm dashed black;
+}
+div.pp div.social{
+    text-align:left;
+    margin-left:3.5mm;
+    float:right;
+    font-size:4mm;
+    line-height:5mm;
+    width:58%;
+    position:absolute;
+    bottom:0;
+    padding-left:0mm;
+}
+
+div.left div.order_detail{
+    height: 36mm;
+    transform: rotate(-90deg);
+    padding: 0 10px;
+    border-right: 1px solid black;
+    width: auto;
+}

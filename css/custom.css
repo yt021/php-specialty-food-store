@@ -1,0 +1,127 @@
+
+ul.s_products{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width:50%;
+    float:right;
+    max-height:80vh;
+    overflow-y:auto;
+    margin-bottom: 10px;
+}
+
+ul#box_fill{
+        background-color:#fddacd;
+    border:3px solid #ffa380;
+    border-radius:5px;
+}
+
+ul.s_products h4{
+    text-align:center;
+    font-size:14px;
+    display:table;
+    border-bottom:3px solid #ffa380;
+    background-color:#ffbda4;
+    width:100%;
+    padding:5px 0;
+}
+@media only screen and (min-width: 700px){
+ul.s_products{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    max-width:850px;
+    margin:auto;
+    float:none;
+    height:auto;
+    overflow-y:auto;
+    margin-bottom: 0px;
+    
+}
+ul.s_products h4{
+    
+}
+
+
+}
+
+
+
+ul.s_products li.s_product{
+    float:right;
+    display:table;
+    width:70px;
+/*    border:1px solid red;*/
+    margin:5px 0;
+    padding:5px;
+/*    margin-top:15px;*/
+    position:relative;
+    font-size:12px;
+    cursor:pointer;
+    text-align:center;
+}
+ul.s_products li.s_product.under{
+    height:70px;
+    cursor:default;
+    
+}
+ul.s_products li.s_product.under div.img{
+    background-color:#eee;
+}
+ul.s_products li.s_product div.img{
+    width:60px;
+    margin:auto;
+    height:60px;
+    border-radius:10px;
+    overflow:hidden;
+}
+ul.s_products li.s_product div.plus{
+    position:absolute;
+    display:none;
+    z-index:2;
+    width:40px;
+    height:40px;
+    line-height:25px;
+    font-size:30px;
+    padding:10px;
+    background-color:maroon;
+    color:white;
+    right:15px;
+    top:15px;
+    border-radius:7px;
+    box-shadow:0 0 10px 0 rgba(255,255,255,0.2);
+    text-align:center;
+}
+ul.s_products li.s_product:hover div.plus{
+    display:block;
+}
+ul.s_products li.s_product a:hover h3{
+    color:#000000;
+}
+ul.s_products li.s_product a:hover div.img{
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.5);
+}
+
+input.btn.middle.w120p{
+    width:120px;
+}
+
+form.has_mid_btns{
+    display:table;
+    margin:10px auto;
+}
+form.has_mid_btns input.btn.middle{
+    clear:none;
+    float:right;
+    margin:0 10px;
+}
+
+
+table.cart.account ul.product_weight li{
+    width:auto;
+    font-size:inherit;
+    border:none;
+    margin:auto;
+    color:black;
+}

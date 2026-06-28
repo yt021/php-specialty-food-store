@@ -1,0 +1,191 @@
+#chat{
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    z-index:20;
+}
+#chat_open{
+   width:50px;
+   height:50px;
+   /*background-color: #fff;*/
+   background-color:rgb(65,159,217);;
+   border-radius:50px;
+   line-height:50px;
+   font-size:50px;
+   text-align:center; 
+   vertical-align:top;   
+   cursor:pointer;
+   position:relative;
+}
+#chat_open.img{
+    width:100%;
+    height:100%;
+}
+#chat_open.vibrate:after{
+    content:'';
+    border-radius:100%;
+    width:60px;
+    height:60px;
+    position:absolute;
+    bottom:-5px;
+    left:-5px;
+    /* background-image: radial-gradient(#008000,rgba(0,80,0,0)); */
+    background:rgb(0, 106, 255);
+    z-index:-1;
+    animation: glow 2s linear 0s infinite alternate;
+}
+@keyframes glow {
+  0% {opacity: 1;}
+  5% {opacity:0.95;}
+  10% {opacity:0.90;}
+  15% {opacity:0.85;}
+  20% {opacity:0.80;}
+  25% {opacity:0.75;}
+  30% {opacity:0.70;}
+  35% {opacity:0.65;}
+  40% {opacity:0.60;}
+  45% {opacity:0.55;}
+  50% {opacity:0.50;}
+  55% {opacity:0.45;}
+  60% {opacity:0.40;}
+  65% {opacity:0.35;}
+  70% {opacity:0.30;}
+  75% {opacity:0.25;}
+  80% {opacity:0.20;}
+  85% {opacity:0.15;}
+  90% {opacity:0.10;}
+  95% {opacity:0.05;}  
+  100% {opacity:0;}
+}
+#chat_open .icon-telegram{
+    vertical-align:top; 
+}
+#chat_open:hover{
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+#chat_box{
+    width:300px;
+    height:500px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
+    position:relative;
+    overflow:hidden;
+    padding-top:50px;
+}
+#chat_box .top_bar{
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:50px;
+    background:rgb(65,159,217);
+    color:white;
+    line-height:40px;
+    font-size:18px;
+
+}
+#chat_box .top_bar .icon-x{
+    color:white;
+    line-height:40px;
+    font-size:20px;
+    margin:0 10px;
+    cursor:pointer;
+    position:relative;
+    top:3px;
+}
+#chat_box .chat_holder{
+    position:absolute;
+    bottom:50px;
+    right:0;
+    overflow-y:scroll;
+    width:106%;
+    height:calc(100% - 50px - 50px);
+    /* background-image:linear-gradient(to left,rgba(65,159,217,0.0),rgba(65,159,217,0.3));; */
+    background:rgba(65,159,217,0.4);
+    
+}
+#chat_box .chat_input{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    height:50px;
+    padding:10px;
+    border-top:1px solid #eee;
+}
+#chat_box .chat_input input{
+    width:calc(100% - 50px);
+}
+#chat_box .chat_input .icon-a{
+    position:absolute;
+    padding:10px;
+    background:rgba(65,159,217);
+    color:#fff;
+    border-radius:30px;
+    bottom:5px;
+    left:5px;
+    transform:rotate(90deg);
+    cursor:pointer;
+}
+#chat_box .chat_input .icon-a:hover{
+    background:rgba(85,179,237);
+}
+
+#chat_box .chat_holder li{
+    width:80%;
+    font-size:14px;
+    margin:5px;
+    padding:5px 10px;;
+    /* border:1px solid rgba(0,0,0,0.5); */
+    border-radius:5px;
+    position:relative;
+    background:rgb(0, 142, 255);
+
+    color:white;
+}
+#chat_box .chat_holder li.rec{
+    position:relative;
+    right:calc(20% - 10px);
+    background:white;
+    color:black;
+}
+
+#chat_box .login{
+    /* position: absolute; */
+    /* top:70px; */
+    width:80%;
+    /* right:10%; */
+    margin:10px auto;
+    /* height:200px; */
+    padding:15px;
+    background:rgb(0, 142, 255);
+    color:white;
+    border-radius:7px;
+    text-align: center;
+}
+#chat_box .social{
+    /* position: absolute; */
+    width: 100%;
+    margin:20px auto;
+    display: block;;
+    font-size: 40px;
+    /* top: 170px; */
+    text-align: center;
+    color: rgb(0, 142, 255);
+}
+#chat_box input.logname{
+    margin: 10px auto;
+display: block;
+text-align: center;
+padding: 10px;
+border-bottom: 1px solid rgb(0, 142, 255);
+}
+#chat_box .social span{
+    padding:10px;
+    border:5px solid;
+    border-radius:100px;
+}
+#chat_box .social:hover{
+    color:rgb(30, 172, 255);
+    transform:scale(1.1);
+}

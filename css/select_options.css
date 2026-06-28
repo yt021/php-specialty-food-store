@@ -1,0 +1,91 @@
+    .select_series{
+        display:table;
+    }
+    .mt20{margin-top:20px;}
+    div.box_holder{
+        display:table;
+        float:right;
+        margin-bottom:10px;
+    }
+    div.box_holder label{
+        float:right !important;
+        margin-top:5px;
+        margin-right:5px;
+    }
+    div.options_item{
+        padding:5px 10px;
+        border-radius:5px;
+        border:1px solid #ccc;
+        float:right;
+        margin-left:5px;
+        margin-bottom:5px;
+        cursor:pointer;
+        font-size:14px;
+    }
+    div.options_item.radio{
+        border-radius:25px;
+    }
+    div.options_item div.check_box{
+        width:17px;
+        height:17px;
+        border:1px solid #ccc;
+        border-radius:inherit;
+        float:left;
+        margin-right:5px;
+        margin-top:4px;
+    }
+
+    div.options_item div.check_box div.check{
+        width:13px;
+        height:13px;
+        margin:1px;
+        border-radius:inherit;
+    }
+    div.options_item.checked{
+        border-color:maroon;
+        background-color:rgba(255,0,0,0.1);
+    }
+    div.options_item.checked div.check_box div.check{
+        background-color:maroon;
+    }
+    
+    div.field{
+        float:right;
+        margin-left:10px;
+    }
+    div.sect{
+        padding:0;
+        margin:10px 0;
+    }
+
+@media only screen and (max-width: 1000px){
+    div.ls_main div.title{
+        font-size: 22px;
+        text-align:center;
+    }
+    form.date label{
+        margin:0;
+        width:90%;
+        text-align:center;
+        margin-bottom:5px;
+        font-size:14px;
+    }
+
+    div.box_holder{
+        float:none;
+        margin:auto;
+    }
+    div.field{
+        margin-bottom:5px;
+        float:none;
+    }
+    
+    form.date input[type="submit"]{
+        width: 80%;
+        margin: auto;
+        display: block;
+        margin-top: 10px;
+    }
+    
+}
+

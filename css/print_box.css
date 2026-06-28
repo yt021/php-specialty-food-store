@@ -1,0 +1,24 @@
+div.pp div.sender_info{
+    position:absolute;
+    width:100%;
+    text-align: center;
+    margin:auto;
+    font-size: 16px;;
+}
+div.rec_info{
+    width:100%;
+    margin:auto;
+    
+}
+div.rec_info table{
+    width:auto;
+    margin:auto;
+    font-size:14px;
+}
+div.rec_info table td,div.rec_info table th{
+    padding:5px 15px;
+}
+div.pp div.social{
+    bottom:10px;
+    left:5px; 
+}

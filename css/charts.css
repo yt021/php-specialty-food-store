@@ -1,0 +1,202 @@
+div.chart_legend{
+    display:table;
+}
+div.chart_legend ul li{
+    float:right;
+    margin:10px;
+}
+div.chart_legend div.legend_dot{
+    width:15px;
+    height:15px;
+    border-radius:10px;
+    margin:auto;
+    margin-top:15px;
+    
+}
+
+div.chart_div_holder{
+    width:960px;
+    height:500px;
+    position:relative;
+}
+div.chart_div{
+    width:960px;
+    height:500px;
+    position:relative;
+}
+/*    Horizontal Axis     */
+div.chart_div div.horizontal ul{
+    width:910px;
+    display:flex;
+    height:50px;
+    position:absolute;
+    bottom:0;
+    border-top:1px solid red;
+    align-items:center;
+    justify-content:space-around;
+    padding-top:20px;
+}
+div.chart_div div.horizontal ul li{
+    text-align: center;
+}
+    /*      Vertical Text For Horizontal Axis       */
+div.chart_div div.horizontal ul li span{
+    transform:rotate(-90deg) translatex(30px);
+    transform-origin: bottom right;
+    display: block;
+    width: 180px;
+    height: 25px;
+}
+div.chart_div div.horizontal ul li{
+    text-align:unset;
+    width:25px;
+}
+div.chart_div div.horizontal ul{
+    height:150px;
+    align-items:unset;
+}
+div.chart_div {
+    height:600px;
+}
+div.chart_div div.horizontal ul li{
+    width: min(calc(var(--iwidth) * 1px) , 25px);
+}
+div.chart_div div.horizontal ul li span{
+    height:min(calc(var(--iwidth) * 1px) , 25px);
+    font-size:max(min(calc(var(--iwidth) * 1px - 2px) , 14px) , 6px);
+}
+/*    Vertical Axis     */
+div.chart_div div.vertical ul{
+    width:50px;
+    display:flex;
+    height:450px;
+    position:absolute;
+    left:0;
+    border-right:1px solid red;
+    align-content:space-around;
+    flex-wrap:wrap;
+}
+div.chart_div div.vertical ul li{
+    width:50px;
+    text-align:center;
+
+}
+/*      Horizontal Lines for Vertical Axis     */
+div.chart_div div.vertical_lines ul{
+    width:880px;
+    display:flex;
+    height:450px;
+    position:absolute;
+    right:15px;
+    top:0;
+    align-content:space-around;
+    flex-wrap:wrap;
+}
+div.chart_div div.vertical_lines ul li{
+    width:inherit;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+}
+/*      Chart       */
+div.chart_div div.chart{
+    width:910px;
+    height:450px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+/*      Bar Chart       */
+div.chart_div div.chart.bar ul{
+    width:inherit;
+    height:inherit;
+    display:flex;
+    position:absolute;
+    align-items:flex-end;
+    justify-content:space-around;
+}
+div.chart_div div.chart.bar ul li{
+    width:25px;
+    background-color:maroon;
+    bottom:0;
+}
+
+/*      Line Chart          */
+
+div.chart_div div.chart.line ul{
+    opacity:0.8
+}
+div.chart_div div.chart.line ul:hover{
+    opacity:1;
+    z-index:4;
+}
+div.chart_div div.chart.line ul li{
+    direction:ltr;
+    position:absolute;
+    bottom:calc(var(--y) * 1px);
+    left:calc(var(--x) * 1px);
+    display:table;
+}
+div.chart_div div.chart.line ul li div.data-point{
+    width:15px;
+    height:15px;
+    border-radius:100%;
+    background-color:white;
+    border:4px solid maroon;
+    border-color:var(--cs_color);
+    position:absolute;
+    top:-7.5px;
+    right:-7.5px;
+    z-index:1;
+}
+div.chart_div div.chart.line ul li div.line-segment{
+    width: calc(var(--hypo) * 1px);
+    height:5px;
+    background-color:var(--cs_color);
+    position:absolute;
+    top:-2.5px;
+    transform: rotate(calc(var(--ang) * 1deg));;
+    transform-origin: left bottom;
+}
+div.chart_div div.chart.line ul:hover li div{
+    z-index:2;
+}
+div.chart_div div.chart.line ul:hover li div.data-point{
+    z-index:4; 
+}
+
+
+@media only screen and (max-width: 1000px){
+    div.chart_div div.vertical_lines ul li{
+        border-bottom-width:2px;
+    }
+    div.chart_div_holder{
+        --width:800;
+        width:calc(var(--width) * 1px);
+        height:calc(var(--width) * 0.55px);
+    }
+    div.chart_div{
+        transform:scale(calc(var(--width) / 960));
+        transform-origin:right top;
+/*        width:400px;*/
+    }
+    div.chart_legend ul li{
+        margin: 5px;
+        font-size: 12px;
+    }
+    div.chart_legend div.legend_dot {
+        width: 10px;
+        height: 10px;
+        margin-top: 5px;
+    }
+}    
+@media only screen and (max-width: 900px){div.chart_div_holder{--width:840;}}
+@media only screen and (max-width: 850px){div.chart_div_holder{--width:790;}}
+@media only screen and (max-width: 800px){div.chart_div_holder{--width:740;}}
+@media only screen and (max-width: 750px){div.chart_div_holder{--width:690;}}
+@media only screen and (max-width: 700px){div.chart_div_holder{--width:640;}}
+@media only screen and (max-width: 650px){div.chart_div_holder{--width:590;}}
+@media only screen and (max-width: 600px){div.chart_div_holder{--width:540;}}
+@media only screen and (max-width: 550px){div.chart_div_holder{--width:490;}}
+@media only screen and (max-width: 500px){div.chart_div_holder{--width:440;}}
+@media only screen and (max-width: 450px){div.chart_div_holder{--width:390;}}
+@media only screen and (max-width: 400px){div.chart_div_holder{--width:340;}}

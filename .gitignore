@@ -1,0 +1,47 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local.php
+auth.json
+
+# Runtime and generated data
+logs/*
+!logs/index.php
+/sitemap.xml
+*.log
+*.pid
+*.cache
+*.tmp
+*.bak
+*.zip
+*.gz
+
+# Databases, exports, and private keys
+*.db
+*.sqlite
+*.sqlite3
+*.sql.gz
+*.dump
+*.pem
+*.key
+*.p12
+*.pfx
+
+# User/customer uploads and generated exports
+uploads/
+content/
+exports/
+backups/
+admin/pinket/products_output.json
+modules/snappay/snappay.json
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Dependencies if installed locally
+vendor/
+node_modules/

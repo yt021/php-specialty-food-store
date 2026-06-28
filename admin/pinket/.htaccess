@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Redirect /orders/create to existing order-receive.php
+RewriteRule ^orders/create$ order-receive.php [L,QSA]
+
+# Redirect /orders/{order-code} to existing order-status-query.php
+RewriteRule ^orders/([^/]+)$ order-status-query.php?order-code=$1 [L,QSA]
+
+# Redirect /orders/{order-code}/ to existing order-status-query.php (with trailing slash)
+RewriteRule ^orders/([^/]+)/$ order-status-query.php?order-code=$1 [L,QSA]
+
+# Redirect /orders/{order-code}/update to order-update-receive.php
+RewriteRule ^orders/([^/]+)/update$ order-update-receive.php?order-code=$1 [L,QSA]
+
+# Allow direct access to PHP files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*$ - [L] 
